@@ -12,6 +12,7 @@ function Login({ onLogin }) {
       },
       body: JSON.stringify({ username }),
     }).then((r) => {
+      console.log(r)
       if (r.ok) {
         r.json().then((user) => onLogin(user));
       }

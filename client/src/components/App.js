@@ -10,7 +10,9 @@ function App() {
 
   useEffect(() => {
     fetch("/me").then((response) => {
+      console.log(response)
       if (response.ok) {
+        // console.log(response)
         response.json().then((user) => setUser(user));
       }
     });
